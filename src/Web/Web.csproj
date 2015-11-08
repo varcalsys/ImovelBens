@@ -185,19 +185,96 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Identity\AccountController.cs" />
     <Compile Include="Controllers\Identity\ManageController.cs" />
+    <Compile Include="Controllers\ImoveisController.cs" />
+    <Compile Include="Models\ImovelViewModel.cs" />
     <Compile Include="Startup.cs" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\app-blue.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\datepicker.css" />
+    <Content Include="Content\css\fileinput.min.css" />
+    <Content Include="Content\css\font-awesome.css" />
+    <Content Include="Content\css\fullscreen-slider.css" />
+    <Content Include="Content\css\jquery-ui.css" />
+    <Content Include="Content\css\jquery.tagsinput.css" />
+    <Content Include="Content\css\simple-line-icons.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\OpenSans-Light-webfont.svg" />
+    <Content Include="fonts\OpenSans-Regular-webfont.svg" />
+    <Content Include="fonts\Simple-Line-Icons.dev.svg" />
+    <Content Include="fonts\Simple-Line-Icons.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\OpenSans-Light-webfont.eot" />
+    <Content Include="fonts\OpenSans-Light-webfont.ttf" />
+    <Content Include="fonts\OpenSans-Light-webfont.woff" />
+    <Content Include="fonts\OpenSans-Regular-webfont.eot" />
+    <Content Include="fonts\OpenSans-Regular-webfont.ttf" />
+    <Content Include="fonts\OpenSans-Regular-webfont.woff" />
+    <Content Include="fonts\Simple-Line-Icons.eot" />
+    <Content Include="fonts\Simple-Line-Icons.ttf" />
+    <Content Include="fonts\Simple-Line-Icons.woff" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="images\avatar-1.png" />
+    <Content Include="images\avatar-2.png" />
+    <Content Include="images\bg-1.jpg" />
+    <Content Include="images\bg-2.jpg" />
+    <Content Include="images\bg-3.jpg" />
+    <Content Include="images\bg-4.jpg" />
+    <Content Include="images\bg-5.jpg" />
+    <Content Include="images\bg-6.jpg" />
+    <Content Include="images\blur.svg" />
+    <Content Include="images\imoveis\2015-11-02303.jpg" />
+    <Content Include="images\imoveis\2015-11-02339.jpg" />
+    <Content Include="images\imoveis\2015-11-02524.jpg" />
+    <Content Include="images\imoveis\2015-11-02609.jpg" />
+    <Content Include="images\imoveis\2015-11-02654.jpg" />
+    <Content Include="images\imoveis\2015-11-02695.jpg" />
+    <Content Include="images\imoveis\2015-11-02717.jpg" />
+    <Content Include="images\imoveis\2015-11-02749.jpg" />
+    <Content Include="images\imoveis\2015-11-02759.jpg" />
+    <Content Include="images\imoveis\2015-11-02799.jpg" />
+    <Content Include="images\imoveis\2015-11-03175.jpg" />
+    <Content Include="images\imoveis\2015-11-03230.jpg" />
+    <Content Include="images\imoveis\2015-11-03509.jpg" />
+    <Content Include="images\imoveis\2015-11-04412.jpg" />
+    <Content Include="images\imoveis\2015-11-04625.jpg" />
+    <Content Include="images\imoveis\2015-11-04761.jpg" />
+    <Content Include="images\imoveis\2015-11-04857.jpg" />
+    <Content Include="images\imoveis\2015-11-04990.jpg" />
+    <Content Include="images\imoveis\thumb\2015-11-02303.jpg" />
+    <Content Include="images\imoveis\thumb\2015-11-02339.jpg" />
+    <Content Include="images\imoveis\thumb\2015-11-02524.jpg" />
+    <Content Include="images\imoveis\thumb\2015-11-02609.jpg" />
+    <Content Include="images\imoveis\thumb\2015-11-02654.jpg" />
+    <Content Include="images\imoveis\thumb\2015-11-02695.jpg" />
+    <Content Include="images\imoveis\thumb\2015-11-02717.jpg" />
+    <Content Include="images\imoveis\thumb\2015-11-02749.jpg" />
+    <Content Include="images\imoveis\thumb\2015-11-02759.jpg" />
+    <Content Include="images\imoveis\thumb\2015-11-02799.jpg" />
+    <Content Include="images\imoveis\thumb\2015-11-03175.jpg" />
+    <Content Include="images\imoveis\thumb\2015-11-03230.jpg" />
+    <Content Include="images\imoveis\thumb\2015-11-03509.jpg" />
+    <Content Include="images\imoveis\thumb\2015-11-04412.jpg" />
+    <Content Include="images\imoveis\thumb\2015-11-04625.jpg" />
+    <Content Include="images\imoveis\thumb\2015-11-04761.jpg" />
+    <Content Include="images\imoveis\thumb\2015-11-04857.jpg" />
+    <Content Include="images\imoveis\thumb\2015-11-04990.jpg" />
+    <Content Include="images\infobox-bg.png" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\marker-blue.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
@@ -205,6 +282,32 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\js\app.js" />
+    <Content Include="Scripts\js\blog.js" />
+    <Content Include="Scripts\js\bootstrap-datepicker.js" />
+    <Content Include="Scripts\js\bootstrap.js" />
+    <Content Include="Scripts\js\calendar.js" />
+    <Content Include="Scripts\js\clndr.js" />
+    <Content Include="Scripts\js\fileinput.min.js" />
+    <Content Include="Scripts\js\home.js" />
+    <Content Include="Scripts\js\infobox.js" />
+    <Content Include="Scripts\js\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\js\jquery-ui-touch-punch.js" />
+    <Content Include="Scripts\js\jquery-ui.min.js" />
+    <Content Include="Scripts\js\jquery.mjs.nestedSortable.js" />
+    <Content Include="Scripts\js\jquery.placeholder.js" />
+    <Content Include="Scripts\js\jquery.slimscroll.min.js" />
+    <Content Include="Scripts\js\jquery.tagsinput.min.js" />
+    <Content Include="Scripts\js\jquery.touchSwipe.min.js" />
+    <Content Include="Scripts\js\jquery.visible.js" />
+    <Content Include="Scripts\js\json2.js" />
+    <Content Include="Scripts\js\moment-2.5.1.js" />
+    <Content Include="Scripts\js\signin.js" />
+    <Content Include="Scripts\js\signup.js" />
+    <Content Include="Scripts\js\sortable.js" />
+    <Content Include="Scripts\js\table.js" />
+    <Content Include="Scripts\js\tablesorter.js" />
+    <Content Include="Scripts\js\underscore.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -243,10 +346,18 @@
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LayoutSite.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\SignOut.cshtml" />
+    <Content Include="Views\Imoveis\Registrar.cshtml" />
+    <Content Include="Views\Imoveis\Detalhes.cshtml" />
+    <Content Include="Views\Imoveis\Pesquisar.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Imoveis\Index.cshtml" />
+    <Content Include="Views\Shared\_ModalLogin.cshtml" />
+    <Content Include="Views\Shared\_MenuEsquerdo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -256,7 +367,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\App\App.csproj">
@@ -270,6 +380,10 @@
     <ProjectReference Include="..\CrossCutting.Ioc\CrossCutting.Ioc.csproj">
       <Project>{058e8973-758e-4b9e-a757-b5892f7288b7}</Project>
       <Name>CrossCutting.Ioc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CrossCutting.Util\CrossCutting.Util.csproj">
+      <Project>{d1fbe502-528c-47b0-b8d5-32c03372b603}</Project>
+      <Name>CrossCutting.Util</Name>
     </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{f07de9c9-41b0-4ce3-8ce9-e99079e80a47}</Project>

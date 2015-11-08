@@ -40,11 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IAppBase.cs" />
+    <Compile Include="Contracts\IFotoApp.cs" />
+    <Compile Include="Contracts\IImovelApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\FotoApp.cs" />
+    <Compile Include="Services\ImovelApp.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Contracts\" />
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{f07de9c9-41b0-4ce3-8ce9-e99079e80a47}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

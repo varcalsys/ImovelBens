@@ -1,0 +1,46 @@
+﻿@model ImovelBens.CrossCutting.Identity.Models.LoginViewModel
+<div class="modal fade" id="signin" role="dialog" aria-labelledby="signinLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="signinLabel">Faça seu login</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" action="/Account/Login" method="POST">
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <div class="btn-group-justified">
+                            <a href="" class="btn btn-lg btn-facebook"><span class="pull-left"></span>Acesso Área Administrativa</a>
+                        </div>
+                    </div>
+                    <div class="signOr"></div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Digite seu Email" class="form-control" name="Email" id="Email">
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Digite sua Senha" class="form-control" name="Password" id="Password">
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="checkbox custom-checkbox"><label><input type="checkbox" name="RememberMe" id="RememberMe" value="true"><span class="fa fa-check"></span> Lembre-me</label></div>
+                            </div>
+                            <div class="col-xs-6 align-right">
+                                <p class="help-block"><a href="/Account/ForgotPassword" class="text-blue">Esqueceu sua senha?</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="btn-group-justified">
+                            <input type="submit" class="btn-lg btn-blue" value="Entrar" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

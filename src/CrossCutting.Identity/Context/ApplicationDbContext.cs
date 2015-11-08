@@ -7,7 +7,7 @@ namespace ImovelBens.CrossCutting.Identity.Context
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IDisposable
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("ImovelBensConnection", throwIfV1Schema: false)
         {
         }
 

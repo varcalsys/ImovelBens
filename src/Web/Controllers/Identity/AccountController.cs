@@ -54,8 +54,8 @@ namespace ImovelBens.Web.Controllers.Identity
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
-                case SignInStatus.RequiresVerification:
-                    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
+                //case SignInStatus.RequiresVerification:
+                //    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
                 default:
                     ModelState.AddModelError("", "Login ou Senha incorretos.");
@@ -125,7 +125,7 @@ namespace ImovelBens.Web.Controllers.Identity
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, DataCriacao = DateTime.Now, PessoaId = model.PessoaId};
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email};
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -422,7 +422,7 @@ namespace ImovelBens.Web.Controllers.Identity
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Imoveis");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult

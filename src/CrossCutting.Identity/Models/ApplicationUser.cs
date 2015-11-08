@@ -8,11 +8,7 @@ namespace ImovelBens.CrossCutting.Identity.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        public int PessoaId { get; set; }
-        public DateTime DataCriacao { get; set; }
-        public DateTime? DataAlteracao { get; set; }
-        public bool Ativo { get; set; }
-
+       
         public ApplicationUser()
         {
             //Ativo = true;
