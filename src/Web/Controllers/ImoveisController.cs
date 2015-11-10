@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 using CrossCutting.Util.Common;
 using ImovelBens.App.Contracts;
@@ -101,19 +102,18 @@ namespace ImovelBens.Web.Controllers
 
 
                 fotos = Helper.LoadFiles(model.Images, Server.MapPath("~/"));
+                
                 imovel.Image = fotos[0].Nome;
 
                 imovel.Fotos = fotos;
 
-                _imovelApp.Register(imovel);
-
-                _imovelApp.Commit();
+                _imovelApp.Register(imovel);             
 
                 return RedirectToAction("Registrar");
             }
-            catch (Exception)
-            {
-                ViewBag.Message = "Erro ao registrar imóvel";
+            catch (Exception ex)
+            {               
+                ViewBag.Error = "Erro ao registrar imóvel. ERRO:" + ex.Message;
                 Helper.DeleteFiles(fotos);
                 return RedirectToAction("Registrar");
             }

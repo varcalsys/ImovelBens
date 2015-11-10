@@ -5,7 +5,8 @@
 
 }
 <div class="rightContainer">
-    <h1>Inserir Novo Imóvel</h1>
+    <h1>Novo Imóvel</h1>
+    @ViewBag.Error
     @using (Html.BeginForm("Registrar", "Imoveis", FormMethod.Post, new { role = " form", enctype = "multipart/form-data" }))
     {
         @Html.AntiForgeryToken()

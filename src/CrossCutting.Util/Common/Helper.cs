@@ -16,6 +16,11 @@ namespace CrossCutting.Util.Common
 
             var fotos = new List<Foto>();
 
+            if (!fotos.Any())
+            {
+                throw new ApplicationException("Erro ao carregar a(s) foto(s)!!!");
+            }
+
             foreach (HttpPostedFileBase file in files)
             {
                 var foto = new Foto();
@@ -28,11 +33,11 @@ namespace CrossCutting.Util.Common
                 Image image = Image.FromStream(ms);
 
                 var bmp = new Bitmap(image, new Size(800, 480));
-                foto.UrlFoto = Path.Combine(url + "images/imoveis/", Path.GetFileName(foto.Nome));
+                foto.UrlFoto = Path.Combine(url + @"images\imoveis\", Path.GetFileName(foto.Nome));
                 bmp.Save(foto.UrlFoto, ImageFormat.Jpeg);
 
                 var thumb = new Bitmap(image, new Size(400, 240));
-                foto.UrlThumb = Path.Combine(url + "images/imoveis/thumb", Path.GetFileName(foto.Nome));
+                foto.UrlThumb = Path.Combine(url + @"images\imoveis\thumb", Path.GetFileName(foto.Nome));
                 thumb.Save(foto.UrlThumb, ImageFormat.Jpeg);
 
                 fotos.Add(foto);

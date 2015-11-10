@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Linq;
 using ImovelBens.Domain.Contracts.Repositories;
 using ImovelBens.Infra.Data.AppContext;
@@ -16,17 +17,38 @@ namespace ImovelBens.Infra.Data.Repositories
 
         public void Add(T entity)
         {
-            _context.Set<T>().Add(entity);
+            try
+            {
+                _context.Set<T>().Add(entity);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public void Update(T entity)
         {
-            _context.Entry(entity).State = EntityState.Modified;
+            try
+            {
+                _context.Entry(entity).State = EntityState.Modified;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public void Delete(T entity)
         {
-            _context.Set<T>().Remove(entity);
+            try
+            {
+                _context.Set<T>().Remove(entity);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public virtual T GetById(int id)

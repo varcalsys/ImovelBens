@@ -226,9 +226,8 @@
     <Content Include="fonts\Simple-Line-Icons.eot" />
     <Content Include="fonts\Simple-Line-Icons.ttf" />
     <Content Include="fonts\Simple-Line-Icons.woff" />
+    <None Include="Properties\PublishProfiles\Publish.pubxml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
-    <Content Include="images\avatar-1.png" />
-    <Content Include="images\avatar-2.png" />
     <Content Include="images\bg-1.jpg" />
     <Content Include="images\bg-2.jpg" />
     <Content Include="images\bg-3.jpg" />
@@ -236,44 +235,9 @@
     <Content Include="images\bg-5.jpg" />
     <Content Include="images\bg-6.jpg" />
     <Content Include="images\blur.svg" />
-    <Content Include="images\imoveis\2015-11-02303.jpg" />
-    <Content Include="images\imoveis\2015-11-02339.jpg" />
-    <Content Include="images\imoveis\2015-11-02524.jpg" />
-    <Content Include="images\imoveis\2015-11-02609.jpg" />
-    <Content Include="images\imoveis\2015-11-02654.jpg" />
-    <Content Include="images\imoveis\2015-11-02695.jpg" />
-    <Content Include="images\imoveis\2015-11-02717.jpg" />
-    <Content Include="images\imoveis\2015-11-02749.jpg" />
-    <Content Include="images\imoveis\2015-11-02759.jpg" />
-    <Content Include="images\imoveis\2015-11-02799.jpg" />
-    <Content Include="images\imoveis\2015-11-03175.jpg" />
-    <Content Include="images\imoveis\2015-11-03230.jpg" />
-    <Content Include="images\imoveis\2015-11-03509.jpg" />
-    <Content Include="images\imoveis\2015-11-04412.jpg" />
-    <Content Include="images\imoveis\2015-11-04625.jpg" />
-    <Content Include="images\imoveis\2015-11-04761.jpg" />
-    <Content Include="images\imoveis\2015-11-04857.jpg" />
-    <Content Include="images\imoveis\2015-11-04990.jpg" />
-    <Content Include="images\imoveis\thumb\2015-11-02303.jpg" />
-    <Content Include="images\imoveis\thumb\2015-11-02339.jpg" />
-    <Content Include="images\imoveis\thumb\2015-11-02524.jpg" />
-    <Content Include="images\imoveis\thumb\2015-11-02609.jpg" />
-    <Content Include="images\imoveis\thumb\2015-11-02654.jpg" />
-    <Content Include="images\imoveis\thumb\2015-11-02695.jpg" />
-    <Content Include="images\imoveis\thumb\2015-11-02717.jpg" />
-    <Content Include="images\imoveis\thumb\2015-11-02749.jpg" />
-    <Content Include="images\imoveis\thumb\2015-11-02759.jpg" />
-    <Content Include="images\imoveis\thumb\2015-11-02799.jpg" />
-    <Content Include="images\imoveis\thumb\2015-11-03175.jpg" />
-    <Content Include="images\imoveis\thumb\2015-11-03230.jpg" />
-    <Content Include="images\imoveis\thumb\2015-11-03509.jpg" />
-    <Content Include="images\imoveis\thumb\2015-11-04412.jpg" />
-    <Content Include="images\imoveis\thumb\2015-11-04625.jpg" />
-    <Content Include="images\imoveis\thumb\2015-11-04761.jpg" />
-    <Content Include="images\imoveis\thumb\2015-11-04857.jpg" />
-    <Content Include="images\imoveis\thumb\2015-11-04990.jpg" />
     <Content Include="images\infobox-bg.png" />
     <Content Include="images\loading.gif" />
+    <Content Include="images\marker-new.png" />
     <Content Include="images\marker-blue.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -367,6 +331,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="images\imoveis\thumb\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\App\App.csproj">
