@@ -1,183 +1,30 @@
-﻿@model ImovelBens.CrossCutting.Identity.Models.LoginViewModel
-@{
-    ViewBag.Title = "Imovel Bens Consultoria | Home";
-    Layout = null;
+﻿@{
+    ViewBag.Title = "Home";
 }
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>Imóvel Bens Consultoria</title>
-
-    <link href="/Content/css/font-awesome.css" rel="stylesheet">
-    <link href="/Content/css/simple-line-icons.css" rel="stylesheet">
-    <link href="/Content/css/fullscreen-slider.css" rel="stylesheet">
-    <link href="/Content/css/bootstrap.css" rel="stylesheet">
-    <link href="/Content/css/app-blue.css" rel="stylesheet">
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body class="notransition no-hidden">
-
-    <!-- Hero -->
-
-    <div id="hero-container">
-        <ul class="cb-slideshow">
-            <li><span></span></li>
-            <li><span></span></li>
-            <li><span></span></li>
-            <li><span></span></li>
-            <li><span></span></li>
-            <li><span></span></li>
-        </ul>
-        <div class="home-header">
-            <div class="home-logo osLight"><span class="fa fa-home"></span> Imóvel Bens Consultoria
-            </div>
-            <a href="#" class="home-navHandler visible-xs"><span class="fa fa-bars"></span></a>
-            @if (User.Identity.IsAuthenticated)
-            {
-                <div class="home-nav">
-                    <ul>
-                        <li><a href="/Home/SignOut">Logout</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="/Imoveis/Index">Área Administrativa</a></li>
-                    </ul>
-                </div>
-            }
-            else
-            {
-                <div class="home-nav">
-                    <ul>
-                        <li><a href="#" data-toggle="modal" data-target="#signin">Área Administrativa</a></li>
-                    </ul>
-                </div>
-            }
-
-        </div>
-
-        <div class="home-caption">
-            <div class="home-title">Agora ficou fácil encontar o imóvel de seus sonhos</div>
-            <div class="home-subtitle">Aqui você encontra - O Imóvel dos sonhos</div>
-        </div>
-        <div class="search-panel">
-            <form class="form-inline" action="/Home/Index" method="POST" role="form">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="city" placeholder="Bairro" autocomplete="off">
-                </div>
-                <div class="form-group hidden-xs adv">
-                    <a href="#" data-toggle="dropdown" class="btn btn-white dropdown-toggle">
-                        <span class="dropdown-label">Quarto(s)</span> <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-select">
-                        <li class="active"><input type="radio" id="bedrooms" name="bedrooms" value=""checked="checked"><a>Quarto(s)</a></li>
-                        <li><input type="radio" id="bedrooms" name="bedrooms" value="1"><a >1</a></li>
-                        <li><input type="radio" id="bedrooms" name="bedrooms" value="2"><a>2</a></li>
-                        <li><input type="radio" id="bedrooms" name="bedrooms" value="3"><a >3</a></li>
-                        <li><input type="radio" id="bedrooms" name="bedrooms" value="4"><a >4</a></li>
-                    </ul>
-                </div>
-                <div class="form-group hidden-xs adv">
-                    <div class="input-group">
-                        <div class="input-group-addon">R$</div>
-                        <input id="minPrice" name="minPrice" class="form-control price" type="text" placeholder="De">
-                    </div>
-                </div>
-                <div class="form-group hidden-xs adv">
-                    <div class="input-group">
-                        <div class="input-group-addon">R$</div>
-                        <input id="maxPrice" name="maxPrice" class="form-control price" type="text" placeholder="Até">
-                    </div>
-                </div>
-                @*<div class="form-group hidden-xs adv">
-                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> Casa</label></div>
-                </div>
-                <div class="form-group hidden-xs adv">
-                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> Apartamento</label></div>
-                </div>*@
-                <div class="form-group">
-                    <input type="submit" class="btn btn-blue" value="Buscar" /> 
-                </div>
-            </form>
-        </div>
+<div class="jumbotron">
+    <h2>VarcalSys Soluções em Sistemas</h2>
+    <p class="lead">Arquitetura Padrão</p>
+    <p><a href="http:/varcalsys.com.br/" class="btn btn-primary btn-lg">Visite nosso site... &raquo;</a></p>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        @*<h2>Desacoplado</h2>
+        <p>
+            Neste modelo encontrarás uma abordagem para desacoplar O Identity de sua camada de apresentação (ASP.NET MVC).<br />
+            O desacoplamento é bem útil para remover a responsabilidade da camada de apresentação e oferecer um código mais limpo.
+        </p>*@
     </div>
-    <div class="highlight">
-        <div class="h-title osLight">Encontre seu novo Imóvel na Imóvel Bens Consultoria</div>
-        <div class="h-text osLight">Fusce risus metus, placerat in consectetur eu, porttitor a est sed sed dolor lorem cras adipiscing</div>
+    <div class="col-md-4">
+        @*<h2>Reutilizavel</h2>
+        <p>
+            Isolando o Identity do MVC é possível reaproveitar a mesma estrutura em N projetos MVC, WebAPI e SignalR utilizando uma estrutura única e modular.
+            É recomendável sempre que possível utilizar um único mecanismo de autenticação para as aplicações, pois facilita a manutenção e gerenciamento.
+        </p>*@
     </div>
-
-    <!-- Footer -->
-
-    <div class="home-footer">
-        <div class="home-wrapper">
-            <div class="row">
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                    <div class="osLight footer-header">A Empresa</div>
-                    <ul class="footer-nav pb20">
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Trabalhos</a></li>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">Ajuda</a></li>
-                        <li><a href="#">Politica</a></li>
-                        <li><a href="#">Termos e Privacidade</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                    <div class="osLight footer-header">Discover</div>
-                    <ul class="footer-nav pb20">
-                        <li><a href="#">Trabalhe Conosco</a></li>
-                        <li><a href="/Imoveis/Pesquisa">Nossos Imóveis</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#signin">Área Administrativa</a></li>
-                        <li><a href="#">Corretores</a></li>
-                        </ul>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="osLight footer-header">Fale Conosco</div>
-                    <ul class="footer-nav pb20">
-                        <li class="footer-phone"><span class="fa fa-phone"></span> +55 (11) 2345-2678</li>
-                        <li class="footer-address osLight">
-                            <p>Rua dos Teste, 98</p>
-                            <p>São Paulo, SP</p>
-                            <p>Brasil</p>
-                        </li>
-                        <li><a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-facebook"></span></a> <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-twitter"></span></a> <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-google-plus"></span></a> <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-linkedin"></span></a> </li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="osLight footer-header">Inscreva-se para receber nossa Newsletter</div>
-                    <form role="form">
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email Address">
-                        </div>
-                        <div class="form-group">
-                            <a href="#" class="btn btn-blue btn-block">Envivar</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="copyright">VarçalSys Soluções<br> &copy; @DateTime.Now.Year</div>
-        </div>
+    <div class="col-md-4">
+        @*<h2>Abstraido</h2>
+        <p>
+            Para obter total desacoplamento foi necessário injetar as dependências através de DI, foi utilizado o SimpleInjector. Apesar de obter uma boa abstração o Identity possui um forte acoplamento ao MVC e impõe o uso de algumas referências na camada de apresentação, porém sem causar problemas.
+        </p>*@
     </div>
-
-    @Html.Partial("_ModalLogin"); 
-
-    
-    <script src="/Scripts/js/jquery-2.1.1.min.js"></script>
-    <script src="~/Scripts/jquery.validate.js"></script>
-    <script src="/Scripts/js/jquery-ui.min.js"></script>
-    <script src="/Scripts/js/jquery-ui-touch-punch.js"></script>
-    <script src="/Scripts/js/jquery.placeholder.js"></script>
-    <script src="/Scripts/js/bootstrap.js"></script>
-    <script src="/Scripts/js/jquery.touchSwipe.min.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript"></script>
-    <script src="/Scripts/js/infobox.js"></script>
-    <script src="/Scripts/js/jquery.visible.js"></script>
-    <script src="/Scripts/js/home.js" type="text/javascript"></script>
-</body>
-</html>
+</div>

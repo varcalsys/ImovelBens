@@ -1,31 +1,22 @@
-﻿using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using ImovelBens.Domain.Contracts.Repositories;
 using ImovelBens.Domain.Entities;
+using ImovelBens.Infra.Data.Context;
+using ImovelBens.Infra.Data.Repositories.Core;
 
 namespace ImovelBens.Infra.Data.Repositories
 {
-    public class ImovelRepository:RepositoryBase<Imovel>, IImovelRepository
+    public class ImovelRepository: RepositoryBase<Imovel>, IImovelRepository
     {
-        public ICollection<Foto> GetByImagesImovelId(int id)
+        
+        public ImovelRepository(AppDbContext db) 
+            :base(db)
         {
-            var fotos = _context.Fotos.Where(x => x.ImovelId == id);
-
-            return fotos.ToList();
-        }
-
-        public override IQueryable<Imovel> GetAll()
-        {
-            var imoveis = from i in _context.Imoveis.Include("Fotos") select i;
-            return imoveis;
-        }
-
-        public override Imovel GetById(int id)
-        {
-            var imovel = from i in _context.Imoveis.Where(x => x.Id == id).Include("Fotos") select i;
-
-            return imovel.FirstOrDefault();
+            Db = db;
         }
     }
 }

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEEE6DD8-0CA0-45CE-9368-9C9E19408100}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ImovelBens.Domain</RootNamespace>
+    <AssemblyName>ImovelBens.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contracts\Repositories\Core\IRepositoryBase.cs" />
+    <Compile Include="Contracts\Repositories\ICorretorRepository.cs" />
+    <Compile Include="Contracts\Repositories\IFotoRepository.cs" />
+    <Compile Include="Contracts\Repositories\IImovelRepository.cs" />
+    <Compile Include="Contracts\Services\Core\IDomainServiceBase.cs" />
+    <Compile Include="Contracts\Services\ICorretorDomainService.cs" />
+    <Compile Include="Contracts\Services\IFotoDomainService.cs" />
+    <Compile Include="Contracts\Services\IImovelDomainService.cs" />
+    <Compile Include="Entities\Corretor.cs" />
+    <Compile Include="Entities\Foto.cs" />
+    <Compile Include="Entities\Imovel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Core\DomainServiceBase.cs" />
+    <Compile Include="Services\CorretoDomainService.cs" />
+    <Compile Include="Services\FotoDomainService.cs" />
+    <Compile Include="Services\ImovelDomainService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Value Objects\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
